@@ -1,0 +1,28 @@
+/* pages/login/login.wxss */
+.title{
+  height: 100rpx;
+  background-color: #b4b5b6;
+}
+.title .title-text{
+  display: flex;
+  line-height: 100rpx;
+  align-items: center;
+  justify-content: center;
+  font-size: 45rpx;
+}
+.page-section{
+  margin: 20rpx;
+}
+.weui-cells__title{
+  text-align: center;
+}
+.weui-input{
+  padding-left: 50rpx;
+  border:1rpx solid black;
+  margin: 10rpx;
+  border-radius: 10rpx;
+  height: 80rpx;
+}
+.btn{
+  margin-top:30rpx; 
+}

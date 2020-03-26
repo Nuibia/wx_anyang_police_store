@@ -1,0 +1,27 @@
+<view>
+  <view class="title">
+  <text class="title-text">欢迎登录警务训练器材装备管理系统</text>
+  </view>
+</view>
+<view class="page-body">
+  <view class="page-section">
+    <view class="weui-cells__title">请输入账号：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" bindblur="hanldeAccount"   auto-focus placeholder="输入账号" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">请输入密码：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" bindblur="hanldePwd"   password type="text" placeholder="输入密码" />
+      </view>
+    </view>
+  </view>
+  <view>
+    <button class="btn" type="primary" bindtap="handleLogin">登陆</button>
+    <button class="btn" type="warn" bindtap="handleReset">忘记密码</button>
+  </view>
+</view>
