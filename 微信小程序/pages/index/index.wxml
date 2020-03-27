@@ -1,2 +1,29 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<swiper class="slides" circular="true" autoplay="{{slides.length > 1}}" indicator-dots="{{slides.length > 1}}" indicator-color="#bcc0c9" indicator-active-color="#3a4861">
+  <swiper-item wx:for="{{slides}}" wx:key="id">
+      <image src="{{item.img}}" mode="aspectFill"/>
+  </swiper-item>
+</swiper>
+
+<view class="title">
+  <text>欢迎使用安阳警察学院仓库管理系统</text>
+</view>
+<view class="grids">
+  <navigator class="item"  url="">
+    <image src="/images/index/警察局.png"/>
+    <text>器材装备</text>
+  </navigator>
+  <navigator class="item"  url="">
+    <image src="/images/index/仓库.png"/>
+    <text>货架查看</text>
+  </navigator>
+  <navigator class="item"  url="">
+    <image src="/images/index/记录.png"/>
+    <text>使用记录</text>
+  </navigator>
+</view>
+<view class="footer">
+  <text>本系统由安阳师范学院软件学院Barteam团队打造</text>
+</view>
+
+

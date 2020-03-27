@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/login/login",
-    "pages/setting/setting"
+    "pages/setting/setting",
+    "pages/login/updatePwd/updatePwd"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,27 +1,63 @@
-<view>
-  <view class="title">
-  <text class="title-text">欢迎登录警务训练器材装备管理系统</text>
+<!-- 这是登陆页面
+author：ahf
+时间：2020/3/27
+ -->
+
+<!-- 登陆前 -->
+<view wx:if="{{isLogged}}">
+  <view class="nav">
+    <view class="title">
+      <text class="title-text">欢迎登录警务训练器材装备管理系统</text>
+    </view>
+  </view>
+  <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cells__title">请输入账号：</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindblur="hanldeAccount" value="{{account}}"  placeholder="输入账号" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">请输入密码：</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindblur="hanldePwd" value="{{pwd}}" password type="text" placeholder="输入密码" />
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="section">
+        <view class="section-title">是否是管理员:</view>
+        <view class="section-content">
+          <switch bindchange="handleChange" checked="checked" />
+        </view>
+      </view>
+      <button class="btn" type="primary" bindtap="handleLogin">登陆</button>
+      <button class="btn" type="warn" bindtap="handleReset">忘记密码</button>
+    </view>
   </view>
 </view>
-<view class="page-body">
-  <view class="page-section">
-    <view class="weui-cells__title">请输入账号：</view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <input class="weui-input" bindblur="hanldeAccount"   auto-focus placeholder="输入账号" />
-      </view>
+<!-- 登陆后 -->
+<view wx:else>
+  <view class="nav">
+    <view class="title">
+      <text class="title-text">欢迎使用警务训练器材装备管理系统</text>
     </view>
-  </view>
-  <view class="page-section">
-    <view class="weui-cells__title">请输入密码：</view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <input class="weui-input" bindblur="hanldePwd"   password type="text" placeholder="输入密码" />
-      </view>
+    <view class="user">
+      <text>欢迎您：{{account}}</text>
     </view>
-  </view>
-  <view>
-    <button class="btn" type="primary" bindtap="handleLogin">登陆</button>
-    <button class="btn" type="warn" bindtap="handleReset">忘记密码</button>
+    <view class="user-pwd">
+      <navigator url="./updatePwd/updatePwd" open-type="navigate">
+        <view class="editUserInfo-list-item">
+          <text>修改密码</text>
+          <text class="iconfont iconyoujiantou"></text>
+        </view>
+      </navigator>
+    </view>
+    <view class="user-image">
+      <image  src="/images/login/背景.jpg"/>
+    </view>
   </view>
 </view>

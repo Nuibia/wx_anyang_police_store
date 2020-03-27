@@ -1,0 +1,38 @@
+<!-- 这是修改密码页面
+author：ahf
+时间：2020/3/27
+ -->
+<view class="nav">
+    <view class="title">
+      <text class="title-text">修改密码</text>
+    </view>
+  </view>
+<view class="update">
+ <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cells__title">请输入现在密码：</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindblur="hanldePwd" value="{{pwd}}" auto-focus placeholder="请输入现在密码：" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">请输入新密码：</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindblur="hanldeNewPwd" value="{{newPwd}}"  type="text" placeholder="请输入新密码：" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells__title">请再次输入新密码：</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" bindblur="hanldeNewPwdAg" value="{{newPwdAg}}"  type="text" placeholder="请再次输入新密码：" />
+        </view>
+      </view>
+    </view>
+    <button class="btn" type="primary" bindtap="handleUpdate">确认修改</button>
+  </view>
+</view>
