@@ -1,2 +1,34 @@
+<!-- 这是器材使用记录页面
+author：jlf
+时间：2020/3/29
+ -->
 <!--pages/records/records.wxml-->
-<text>这个是使用记录页面</text>
+<!-- 顶部操作栏开始 -->
+<view class="top_row">
+    <view class="picker">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{picker_array}}">
+            <input class="" value="" type="text" placeholder="器械归还记录"></input>
+        </picker>
+    </view>
+    <view class="begintime">
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <input class="" value="" type="text" placeholder="选择开始时间"></input>
+        </picker>
+    </view>
+    <view class="overtime">
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <input class="" value="" type="text" placeholder="选择结束时间"></input>
+        </picker>
+    </view>
+    <view class="search_btn">
+        查询
+    </view>
+</view>
+<!-- 顶部操作栏结束 -->
+
+<!-- 记录展示区开始 -->
+<view class="display">
+    <Table thead="{{thead}}"></Table>
+</view>
+<!-- 记录展示区结束 -->
+

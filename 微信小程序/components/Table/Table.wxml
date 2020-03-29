@@ -1,0 +1,45 @@
+<!-- 这是表格组件
+author：jlf
+时间：2020/3/29
+ -->
+<!--components/Table/Table.wxml-->
+<view class="table">
+    <view class="tr thead">
+        <!-- <view class="th">首页</view>
+        <view class="th">品名</view>
+        <view class="th">类名</view>
+        <view class="th">单位</view>
+        <view class="th">备注</view> -->
+        <block wx:for="{{thead}}" wx:key="id">
+            <view class="th {{item.isWidth}}">{{item.name}}</view>
+        </block>
+          
+    </view>
+    <view class="tr tbody">
+        <view class="td">1</view> 
+        <view class="td">2020032902</view> 
+        <view class="td">2020-03-29</view> 
+        <view class="td">枪</view> 
+        <view class="td">武器</view> 
+        <view class="td">1</view> 
+        <view class="td">1</view> 
+        <view class="td">jlf</view> 
+        <view class="td">jlf</view> 
+        <view class="td">无</view> 
+        <view class="td">查看</view> 
+    </view>
+    <view class="tr tbody">
+        <view class="td">1</view> 
+        <view class="td">2020032902</view> 
+        <view class="td">2020-03-29</view> 
+        <view class="td">枪</view> 
+        <view class="td">办公用品</view> 
+        <view class="td">1</view> 
+        <view class="td">1</view> 
+        <view class="td">jlf</view> 
+        <view class="td">jlf</view> 
+        <view class="td">这里是备注</view> 
+        <view class="td">查看</view> 
+    </view>
+</view>
+  

@@ -14,7 +14,7 @@
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
 		"checkInvalidKey": true,
-		"checkSiteMap": true,
+		"checkSiteMap": false,
 		"uploadWithSourceMap": true,
 		"babelSetting": {
 			"ignore": [],
@@ -24,8 +24,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.3",
-	"appid": "wx6b1014678b2f4e65",
-	"projectname": "%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"appid": "wxecec1fc67f71687e",
+	"projectname": "AY_police",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -74,6 +74,13 @@
 					"id": -1,
 					"name": "pages/setting/setting",
 					"pathName": "pages/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "器材使用记录",
+					"pathName": "pages/records/records",
 					"scene": null
 				}
 			]
