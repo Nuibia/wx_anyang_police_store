@@ -187,5 +187,11 @@ Page({
   },
   handleReset() {
     fetch.wxShowToast('请联系管理员');
+  },
+  handleBack(){
+    wx.clearStorage();
+    this.setData({
+      isLogged: true
+    })
   }
 })

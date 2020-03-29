@@ -1,4 +1,4 @@
-// pages/setting/setting.js
+// pages/borrow/borrow.js
 Page({
 
   /**

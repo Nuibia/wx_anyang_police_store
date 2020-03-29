@@ -52,10 +52,11 @@ author：ahf
       <navigator url="./updatePwd/updatePwd" open-type="navigate">
         <view class="editUserInfo-list-item">
           <text>修改密码</text>
-          <text class="iconfont iconyoujiantou"></text>
         </view>
       </navigator>
     </view>
+      <button class="btn" type="primary" bindtap="handleBack">退出登录</button>
+
     <view class="user-image">
       <image  src="/images/login/背景.jpg"/>
     </view>

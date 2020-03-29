@@ -2,8 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/login/login",
-    "pages/setting/setting",
-    "pages/login/updatePwd/updatePwd"
+    "pages/login/updatePwd/updatePwd",
+    "pages/eqshow/eqshow",
+    "pages/shelves_show/shelves_show",
+    "pages/records/records",
+    "pages/borrow/borrow"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,12 +23,6 @@
         "iconPath": "/images/tabbar/首页.png",
         "selectedIconPath": "/images/tabbar/首页 (1).png",
         "text": "首页"
-      },
-      {
-        "pagePath": "pages/setting/setting",
-        "iconPath": "/images/tabbar/管理 (1).png",
-        "selectedIconPath": "/images/tabbar/管理.png",
-        "text": "管理"
       },
       {
         "pagePath": "pages/login/login",

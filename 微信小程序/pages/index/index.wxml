@@ -1,4 +1,7 @@
 <!--pages/index/index.wxml-->
+<!-- 首页
+author：ahf
+time：2020/03/27 -->
 <swiper class="slides" circular="true" autoplay="{{slides.length > 1}}" indicator-dots="{{slides.length > 1}}" indicator-color="#bcc0c9" indicator-active-color="#3a4861">
   <swiper-item wx:for="{{slides}}" wx:key="id">
       <image src="{{item.img}}" mode="aspectFill"/>
@@ -9,21 +12,22 @@
   <text>欢迎使用安阳警察学院仓库管理系统</text>
 </view>
 <view class="grids">
-  <navigator class="item"  url="">
+  <navigator class="item"  url="/pages/eqshow/eqshow">
     <image src="/images/index/警察局.png"/>
     <text>器材装备</text>
   </navigator>
-  <navigator class="item"  url="">
+  <navigator class="item"  url="/pages/shelves_show/shelves_show">
     <image src="/images/index/仓库.png"/>
     <text>货架查看</text>
   </navigator>
-  <navigator class="item"  url="">
+  <navigator class="item"  url="/pages/records/records">
     <image src="/images/index/记录.png"/>
     <text>使用记录</text>
   </navigator>
-</view>
-<view class="footer">
-  <text>本系统由安阳师范学院软件学院Barteam团队打造</text>
+  <navigator class="item"  url="/pages/borrow/borrow">
+    <image src="/images/index/器材归还.png"/>
+    <text>归还器材</text>
+  </navigator>
 </view>
 
 
