@@ -37,12 +37,12 @@ Page({
     params:{
       pageSize:12,
       pageIndex:1,
-      guid:wx.getStorageSync('guid'),
+      guid:'',
     },
     withTimeparams:{
       pageSize:12,
       pageIndex:1,
-      guid:wx.getStorageSync('guid'),
+      guid:'',
       startTime:'',
       endTime:'',
     },
@@ -86,8 +86,14 @@ Page({
     ],
   },
   onLoad: function (options) {
-    // const guid = wx.getStorageSync('guid');
-    // this.pageData.params.guid = guid;
+    const guid = wx.getStorageSync('guid');
+    const cookies = wx.getStorageSync('cookies');
+    this.pageData.header = {
+      'content-type': 'application/json' ,
+      'Cookie': cookies,
+    },
+    this.pageData.params.guid = guid;
+    this.pageData.withTimeparams.guid = guid;
     console.log(this.pageData.params);
     this.getData('BackLogsSearch', this.pageData.params, this.pageData.header);
   },
@@ -190,17 +196,33 @@ Page({
       header,
     ).then(res=>{
       console.log(res);
-      const displayArray = res.data.Data;
-      this.setData({
-        // displayArray:displayArray
-        displayArray:[...this.data.displayArray, ...displayArray]
-      })
-      if(displayArray.length<=0){
+      if(res.data.Status == 2){
+        const msg = res.data.Msg;
         wx.showToast({
-          title: '暂时没有更多数据',
+          title: msg,
           icon: 'none',
           mask: true,
         });
+      }else if(res.data.Status == 2){
+        const msg = res.data.Msg;
+        wx.showToast({
+          title: msg,
+          icon: 'none',
+          mask: true,
+        });
+      }else{
+        const displayArray = res.data.Data;
+        this.setData({
+          // displayArray:displayArray
+          displayArray:[...this.data.displayArray, ...displayArray]
+        })
+        if(displayArray.length<=0){
+          wx.showToast({
+            title: '暂时没有更多数据',
+            icon: 'none',
+            mask: true,
+          });
+        }
       }
     })
   },
