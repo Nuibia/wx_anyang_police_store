@@ -2,7 +2,6 @@
 author：jlf
 时间：2020/3/29
  -->
-<!--pages/records/records.wxml-->
 <!-- 顶部操作栏开始 -->
 <view class="top_row">
     <view class="picker">
