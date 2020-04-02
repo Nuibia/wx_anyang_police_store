@@ -1,0 +1,45 @@
+/* components/Table/Table.wxss */
+.table{
+    background-color: white;
+    border:1px solid #dadada;
+    border-right:0;
+    border-bottom: 0;
+    width: 97%;
+    .thead{
+        background-color: #becffe;
+    }
+    .tbody{
+        // 选中tbody中的第二第三列并将它们的宽度设置为200%
+        view:nth-child(2){
+            width: 200%;
+        }
+        view:nth-child(3){
+            width: 200%;
+        }
+    }
+    .tr{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        .th{
+            padding: 3px;
+            border-bottom: 1px solid #dadada;
+            border-right: 1px solid #dadada;
+            text-align: center;
+            width: 100%;
+            font-size: 14px;
+        }
+        .width{
+            width: 200%;
+        }
+        .td{
+            padding: 3px;
+            border-bottom: 1px solid #dadada;
+            border-right: 1px solid #dadada;
+            text-align: center;
+            width: 100%;
+            font-size: 14px;
+            color: #666666;
+        }
+    }
+}

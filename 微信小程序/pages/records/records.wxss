@@ -1,1 +1,33 @@
 /* pages/records/records.wxss */
+page {
+  padding: 0rpx 3vmin;
+  margin: 0;
+}
+.top_row {
+  padding: 3vmin 0;
+  display: flex;
+}
+.top_row input {
+  border: 1px solid #ccc;
+  padding: 5rpx 5rpx;
+}
+.top_row .picker {
+  flex: 2;
+}
+.top_row .begintime {
+  flex: 2;
+  margin: 0vmin 2vmin;
+}
+.top_row .overtime {
+  flex: 2;
+  margin: 0vmin 2vmin;
+}
+.top_row .search_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  margin-right: 5vmin;
+  border-radius: 10%;
+  width: 9%;
+}

@@ -1,0 +1,42 @@
+/* components/Table/Table.wxss */
+.table {
+  background-color: white;
+  border: 1px solid #dadada;
+  border-right: 0;
+  border-bottom: 0;
+  width: 97%;
+}
+.table .thead {
+  background-color: #becffe;
+}
+.table .tbody view:nth-child(2) {
+  width: 200%;
+}
+.table .tbody view:nth-child(3) {
+  width: 200%;
+}
+.table .tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.table .tr .th {
+  padding: 3px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+}
+.table .tr .width {
+  width: 200%;
+}
+.table .tr .td {
+  padding: 3px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  color: #666666;
+}
