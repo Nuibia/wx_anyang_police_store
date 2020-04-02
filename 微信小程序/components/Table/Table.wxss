@@ -32,6 +32,9 @@
   width: 200%;
 }
 .table .tr .td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 3px;
   border-bottom: 1px solid #dadada;
   border-right: 1px solid #dadada;

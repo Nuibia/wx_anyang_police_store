@@ -1,5 +1,12 @@
 /* pages/eqshow/eqshow.wxss */
-
+.title{
+  display: flex;
+}
+.title .page{
+  width: 0;
+  flex: 1;
+  justify-content: space-between;
+}
 /* 下拉框样式 */
 picker {
   margin-bottom: -36px;
@@ -24,10 +31,10 @@ picker {
   text-align:center;
   }
   .weui-btn_mini{
-    margin-right:-122px;
+    /* margin-right:-122px; */
     line-height: 1.4;
     width: 70px;
-    margin-left: -144px;
+    /* margin-left: -144px; */
   }
 
 /* 搜索框样式 */
@@ -52,9 +59,7 @@ picker {
 }
 
 .weui-search-bar {
-  width: 210px;
-  margin-left: 320px;
-  margin-top: -33px;
+  width: 210rpx;
   font-weight: 700;
   padding: 0px;
   background-color: #fff;
