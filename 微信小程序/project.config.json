@@ -25,7 +25,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.3",
-	"appid": "wxa2175fdf38a7cf0c",
+	"appid": "wx20cbe3105dc26434",
 	"projectname": "%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -79,7 +79,7 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": -1
 					"name": "pages/eqshow/eqshow",
 					"pathName": "pages/eqshow/eqshow",
 					"query": "",
