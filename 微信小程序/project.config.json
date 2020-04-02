@@ -24,8 +24,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.3",
-	"appid": "wxecec1fc67f71687e",
-	"projectname": "AY_police",
+	"appid": "wx20cbe3105dc26434",
+	"projectname": "%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -79,8 +79,22 @@
 				},
 				{
 					"id": -1,
-					"name": "器材使用记录",
-					"pathName": "pages/records/records",
+					"name": "pages/shelves_show/shelves_show",
+					"pathName": "pages/shelves_show/shelves_show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
 					"scene": null
 				}
 			]
