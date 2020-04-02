@@ -10,6 +10,7 @@
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": true,
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
@@ -78,16 +79,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/shelves_show/shelves_show",
-					"pathName": "pages/shelves_show/shelves_show",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
+					"id": -1
+					"name": "pages/eqshow/eqshow",
+					"pathName": "pages/eqshow/eqshow",
 					"query": "",
 					"scene": null
 				},

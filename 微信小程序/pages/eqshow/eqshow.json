@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "pageOrientation": "landscape",
+  "enablePullDownRefresh":true,
+  "onReachBottomDistance":50
+
 }
