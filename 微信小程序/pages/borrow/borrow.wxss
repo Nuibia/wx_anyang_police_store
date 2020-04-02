@@ -1,1 +1,160 @@
 /* pages/borrow/borrow.wxss */
+
+.borrowContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_item {
+  display: flex;
+  margin-top: 20rpx;
+  height: 80rpx;
+  border-top: 1rpx solid rgb(172, 169, 169);
+  border-bottom: 1rpx solid rgb(172, 169, 169);
+  align-items: center;
+}
+
+.form_item image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 4rpx;
+}
+
+.form_item label {
+  margin-left: 10rpx;
+}
+
+.form_item input {
+  height: 80rpx;
+  width: 75%;
+  color: rgb(61, 59, 59);
+  font-size: 28rpx;
+}
+
+picker {
+  display: flex;
+}
+
+.picker {
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  display: inline-block;
+  color: rgb(155, 151, 151);
+  width: 400rpx;
+}
+
+.search_btn {
+  width: 100%;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: #e8eccb;
+}
+
+.borrow_table {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rpx;
+}
+
+.tr {
+  display: flex;
+  height: 80rpx;
+  background-color: rgb(122, 191, 255);
+  line-height: 80rpx;
+  font-size: 34rpx;
+}
+
+.tTr {
+  background-color: white;
+}
+
+.td {
+  width: 20%;
+  text-align: center;
+  border: 1rpx solid rgb(224, 224, 224);
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.td navigator, .return {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  border-radius: 15rpx;
+  width: 130rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #1aad19;
+  color: white;
+  font-weight: bold;
+  font-size: 32rpx;
+
+}
+
+.not_return {
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  border-radius: 15rpx;
+  width: 130rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #adb1ad;
+  color: white;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+.notFound {
+  text-align: center;
+  margin-top: 10rpx;
+  font-size: 34rpx;
+}
+
+.page_turner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.head_page, .tail_page {
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1rpx solid rgb(223, 220, 220);
+}
+
+.head_page{
+  border-radius: 10rpx 0 0 10rpx;
+}
+.tail_page{
+  border-radius: 0 10rpx 10rpx 0 ;
+}
+.prev ,.next {
+   width: 140rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+   border-top: 1rpx solid rgb(223, 220, 220);
+  border-bottom: 1rpx solid rgb(223, 220, 220);
+}
+
+.page_index {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1rpx solid rgb(223, 220, 220);
+}
+
+.checked{
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1rpx solid rgb(223, 220, 220);
+  background-color: rgb(66, 175, 84);
+  color: white;
+}

@@ -1,0 +1,29 @@
+/* pages/borrow/detail/detail.wxss */
+
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.trItem{
+  display: flex;
+}
+
+text {
+  /* display: inline-block; */
+  font-size: 36rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border: 1rpx solid rgb(211, 211, 208);
+}
+
+.th {
+  width: 30%;
+  height: 90rpx;
+  background-color: rgb(163, 163, 163);
+}
+
+.content {
+  width: 70%;
+  text-align: center;
+}

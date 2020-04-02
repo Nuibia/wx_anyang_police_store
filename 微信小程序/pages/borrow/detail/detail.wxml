@@ -1,0 +1,61 @@
+<!--pages/borrow/detail/detail.wxml-->
+<!--
+  pages/borrow/borrow.wxml
+  author: lts
+  date: 2020/3/29
+-->
+<view class="detailContainer">
+
+  <view class="trItem">
+    <text class="th">序号：</text>
+    <text class="content">1</text>
+  </view>
+  <view class="trItem">
+    <text class="th">品名：</text>
+    <text class="content">{{ detailData[0].eName }}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">类名：</text>
+    <text class="content">{{ detailData[0].cName }}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">货架号：</text>
+    <text class="content">{{ detailData[0].id }}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">总量：</text>
+    <text class="content">{{ detailData[0].totalNum }}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">可用量：</text>
+    <text class="content">{{ detailData[0].canUNum }}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">新品数量：</text>
+    <text class="content">{{ detailData[0].newNum }}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">单位：</text>
+    <text class="content">{{ detailData[0].unit }}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">日期：</text>
+    <text class="content">{{detailData[1].lendTime}}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">单号：</text>
+    <text class="content">{{ detailData[1].oddId}}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">使用人：</text>
+    <text class="content">{{ detailData[1].useName}}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">管理员：</text>
+    <text class="content">{{ detailData[1].uName }}</text>
+  </view>
+  <view class="trItem">
+    <text class="th">备注：</text>
+    <text class="content">{{ detailData[1].note }}</text>
+  </view>
+</view>

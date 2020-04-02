@@ -85,9 +85,6 @@ Page({
     const account = this.data.account;
     const pwd = this.data.pwd;
     if (account == '' || account == undefined) {
-      // wx.showToast({
-      //   title: '账号不为空',
-      // })
       fetch.wxShowToast('账号不能为空，请重新输入')
       return;
     }
@@ -127,50 +124,7 @@ Page({
         })
       }
     })
-    // wx.request({
-    //   url: app.baseUrl + '/ApiRoot/Login/UserLogin',
-    //   method: 'post',
-    // data: {
-    //   account: this.data.account,
-    //   pwd: this.data.pwd,
-    //   limit: this.data.limit
-    // },
-    //   header: {
-    //     'content-type': 'application/json' // 默认值
-    //   },
-    //   success: (res) => {
-    //     console.log(res);
-    //     if (res.data.Status == 'fail') {
-    //       wx.showToast({
-    //         title: res.data.Mess,
-    //       })
-    //     } else {
-    //       const cookies = res.cookies[0];
-    //       console.log(cookies)
-    //       const data = res.data;
-    //       wx.setStorageSync('guid', data.Guid);
-    //       wx.setStorageSync('cookies', cookies);
-    //       wx.setStorageSync('account', this.data.account);
-    //       wx.setStorageSync('limit', this.data.limit);
-    //       this.setData({
-    //         isLogged: false
-    //       })
-    //     //   wx.showToast({
-    //     //   title: '登陆成功!',
-    //     //   success: () => {
-    //     //     setTimeout(function() {
-    //     //       wx.switchTab({
-    //     //         url: '/pages/index/index'
-    //     //       })
 
-    //     //   }
-    //     // })
-    //     }
-    //   },
-    //   error(res) {
-    //     console.log(res);
-    //   }
-    // })
   },
   //权限修改
   handleChange(ev) {
