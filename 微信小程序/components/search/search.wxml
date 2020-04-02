@@ -1,0 +1,7 @@
+<view class="search">
+    <view class="search-text">
+      <text class="iconfont icon-sousuo"></text>
+      <input type="text" placeholder="按照货架号搜索" bindinput="handleInput" value="{{searchList}}"/>
+    </view>
+    <view class="search-cancel" wx:if="{{isFocus}}" bindtap="handleCancel">取消</view>
+  </view>
