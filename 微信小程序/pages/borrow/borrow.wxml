@@ -1,12 +1,12 @@
 <!--
-  pages/borrow/borrow.wxml
+  归还器材页面
   author: lts
   date: 2020/3/29
 -->
 <view class="borrowContainer">
   <view class="select">
     <view class="date, form_item">
-      <image class="name_image" src="/images/icon/name.png"></image>
+      <image class="name_image" src="/images/icon/date.png"></image>
       <picker mode='date' value="{{startTime}}" start="2019-09-01" bindchange="bindStartDateChange">
         <label>开始日期：</label>
         <view class="picker">
@@ -15,7 +15,7 @@
       </picker>
     </view>
     <view class="date, form_item">
-      <image class="name_image" src="/images/icon/name.png"></image>
+      <image class="name_image" src="/images/icon/date.png"></image>
       <picker mode='date' value="{{endTime}}" start="2019-09-01" bindchange="bindEndDateChange">
         <label>截至日期：</label>
         <view class="picker">
@@ -24,7 +24,7 @@
       </picker>
     </view>
     <view class="search_btn" catchtap="handleCatchtap">
-      <button type="primary">查询</button>
+      <button >查询</button>
     </view>
   </view>
   <view>
@@ -41,8 +41,8 @@
           <view class="td">{{ item.lendTime }}</view>
           <view class="td">{{item.oddId}}</view>
           <view class="td">{{item.useName}}</view>
-          <view class="td">
-            <navigator url='{{"/pages/borrow/detail/detail?id="+item.id}}' catchtap="handleDetail" data-id="{{item.id}}">
+          <view class="td ">
+            <navigator   url='{{"/pages/borrow/detail/detail?id="+item.id+"&oddid="+ item.oddId}}' catchtap="handleDetail" data-id="{{item.id}}">
               查看
             </navigator>
           </view>

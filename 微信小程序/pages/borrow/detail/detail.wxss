@@ -5,25 +5,25 @@
   flex-direction: column;
 }
 
-.trItem{
+.borrow_table {
   display: flex;
+  flex-direction: column;
+  font-size: 20rpx;
 }
 
-text {
-  /* display: inline-block; */
-  font-size: 36rpx;
-  height: 90rpx;
-  line-height: 90rpx;
-  border: 1rpx solid rgb(211, 211, 208);
+.tr {
+  display: flex;
+  background-color: #becffe;
 }
 
-.th {
-  width: 30%;
-  height: 90rpx;
-  background-color: rgb(163, 163, 163);
+.tTr {
+  background-color: white;
 }
-
-.content {
-  width: 70%;
+.td {
+  width: 10%;
   text-align: center;
+  border: 1rpx solid rgb(224, 224, 224);
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }

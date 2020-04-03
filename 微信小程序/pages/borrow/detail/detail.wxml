@@ -1,61 +1,36 @@
 <!--pages/borrow/detail/detail.wxml-->
 <!--
-  pages/borrow/borrow.wxml
+  详情页面
   author: lts
   date: 2020/3/29
 -->
 <view class="detailContainer">
+  <view class="borrow_table">
+    <view class="tr">
+      <view class="td">序号</view>
+      <view class="td">品名</view>
+      <view class="td">类名</view>
+      <view class="td">货架</view>
+      <view class="td">总量</view>
+      <view class="td">可用量</view>
+      <view class="td">新品数</view>
+      <view class="td">单位</view>
+      <view class="td">单号</view>
+      <view class="td">管理员</view>
+    </view>
+    <view class="tr tTr" wx:for='{{ detailData }}' wx:key='index' >
+        <view class="td">{{index+1}}</view>
+      <view class="td">{{ item.eName }}</view>
+      <view class="td">{{ item.cName }}</view>
+      <view class="td">{{ item.sName }}</view>
+      <view class="td">{{ item.totalNum }}</view>
+      <view class="td">{{ item.canUNum }}</view>
+      <view class="td">{{ item.newNum }}</view>
+      <view class="td">{{ item.unit }}</view>
+      <view class="td">{{ dataInfo.oddId }}</view>
+      <view class="td">{{ dataInfo.uName }}</view>
 
-  <view class="trItem">
-    <text class="th">序号：</text>
-    <text class="content">1</text>
+    </view>
   </view>
-  <view class="trItem">
-    <text class="th">品名：</text>
-    <text class="content">{{ detailData[0].eName }}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">类名：</text>
-    <text class="content">{{ detailData[0].cName }}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">货架号：</text>
-    <text class="content">{{ detailData[0].id }}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">总量：</text>
-    <text class="content">{{ detailData[0].totalNum }}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">可用量：</text>
-    <text class="content">{{ detailData[0].canUNum }}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">新品数量：</text>
-    <text class="content">{{ detailData[0].newNum }}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">单位：</text>
-    <text class="content">{{ detailData[0].unit }}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">日期：</text>
-    <text class="content">{{detailData[1].lendTime}}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">单号：</text>
-    <text class="content">{{ detailData[1].oddId}}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">使用人：</text>
-    <text class="content">{{ detailData[1].useName}}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">管理员：</text>
-    <text class="content">{{ detailData[1].uName }}</text>
-  </view>
-  <view class="trItem">
-    <text class="th">备注：</text>
-    <text class="content">{{ detailData[1].note }}</text>
-  </view>
+
 </view>
