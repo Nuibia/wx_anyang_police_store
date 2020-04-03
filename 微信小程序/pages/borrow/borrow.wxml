@@ -1,2 +1,69 @@
-<!--pages/borrow/borrow.wxml-->
-<text>这个是归还器材页面</text>
+<!--
+  pages/borrow/borrow.wxml
+  author: lts
+  date: 2020/3/29
+-->
+<view class="borrowContainer">
+  <view class="select">
+    <view class="date, form_item">
+      <image class="name_image" src="/images/icon/name.png"></image>
+      <picker mode='date' value="{{startTime}}" start="2019-09-01" bindchange="bindStartDateChange">
+        <label>开始日期：</label>
+        <view class="picker">
+          {{startTime}}
+        </view>
+      </picker>
+    </view>
+    <view class="date, form_item">
+      <image class="name_image" src="/images/icon/name.png"></image>
+      <picker mode='date' value="{{endTime}}" start="2019-09-01" bindchange="bindEndDateChange">
+        <label>截至日期：</label>
+        <view class="picker">
+          {{endTime}}
+        </view>
+      </picker>
+    </view>
+    <view class="search_btn" catchtap="handleCatchtap">
+      <button type="primary">查询</button>
+    </view>
+  </view>
+  <view>
+    <view class="borrow_table">
+      <view class="tr ">
+        <view class="td">日期</view>
+        <view class="td">单号</view>
+        <view class="td">使用人</view>
+        <view class="td">详情</view>
+        <view class="td">状态</view>
+      </view>
+      <view wx:if='{{ isShow }}'>
+        <view class="tr tTr" wx:for='{{ table }}' wx:key='index'>
+          <view class="td">{{ item.lendTime }}</view>
+          <view class="td">{{item.oddId}}</view>
+          <view class="td">{{item.useName}}</view>
+          <view class="td">
+            <navigator url='{{"/pages/borrow/detail/detail?id="+item.id}}' catchtap="handleDetail" data-id="{{item.id}}">
+              查看
+            </navigator>
+          </view>
+          <view class="td">
+            <view catchtap="handleReturn" class="{{ item.ustate?'return':'not_return' }}" data-id="{{ item.id }}">
+              {{item.ustate?'已归还':'未归还'}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if='{{ !isShow }}' class="notFound">
+      <text>暂无借出信息...</text>
+    </view>
+    <view class="page_turner">
+      <view class="head_page" catchtap="handleClickHeadPageAndTailPage" data-status="0">首页</view>
+      <view class="prev" catchtap="handlePrev">上一页</view>
+      <view class="{{ item.isChecked ? 'checked':'page_index'  }}" wx:for='{{ totalArr }}' wx:key='index' catchtap="handleClickPageIndex" data-pageIndex="{{ item.pageIndex }}">{{item.pageIndex}} </view>
+
+      <view class="next" catchtap="handleNext">下一页 </view>
+      <view class="tail_page" catchtap="handleClickHeadPageAndTailPage" data-status="1">尾页</view>
+    </view>
+  </view>
+</view>

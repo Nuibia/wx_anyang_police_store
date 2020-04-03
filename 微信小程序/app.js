@@ -2,6 +2,9 @@ App({
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
+  data: {
+    returnInfo:{}
+  },
   onLaunch: function () {
       this.baseUrl="https://www.barteam.cn:3587";
       // wx.clearStorage();

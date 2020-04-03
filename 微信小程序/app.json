@@ -1,12 +1,17 @@
 {
   "pages": [
+    "pages/borrow/borrow",
+    
     "pages/index/index",
+    
+    
+    
     "pages/login/login",
     "pages/login/updatePwd/updatePwd",
     "pages/eqshow/eqshow",
     "pages/shelves_show/shelves_show",
     "pages/records/records",
-    "pages/borrow/borrow"
+    "pages/borrow/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,6 +37,5 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
