@@ -7,32 +7,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-      detailData:[],
-
+    detailData: [],
+    dataInfo: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    const { id } = options
+    const {
+      id,
+      oddid
+    } = options
+    console.log({
+      id,
+      oddid
+    })
     const guid = wx.getStorageSync('guid')
     const cookie = wx.getStorageSync('cookies')
-    const data = [appDatas.data.returnInfo]
-    // console.log(data)
-    fetch.wxRequest('/api/BackGoods/GetUseDetial', {
+    const {
+      uName,
+      oddId
+    } = appDatas.data.returnInfo
+    fetch.wxRequest('/api/BackGoods/GetUseDetialWithOddId', {
         useLogsId: id,
+        oddid,
         guid
       },
-      "GET",
-      {
+      "GET", {
         'content-type': 'application/json', // 默认值
-        'Cookie': wx.getStorageSync('cookies'), 
+        'Cookie': wx.getStorageSync('cookies'),
       },
     ).then((res) => {
-        this.setData({
-          detailData: [...res.data.Data, ...data]
-        })
+      console.log(res)
+      this.setData({
+        detailData: res.data.Data,
+        dataInfo: {
+          uName,
+          oddId
+        }
+      })
     })
 
   },

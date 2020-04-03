@@ -1,11 +1,7 @@
 {
   "pages": [
-    "pages/borrow/borrow",
-    
     "pages/index/index",
-    
-    
-    
+    "pages/borrow/borrow",
     "pages/login/login",
     "pages/login/updatePwd/updatePwd",
     "pages/eqshow/eqshow",
