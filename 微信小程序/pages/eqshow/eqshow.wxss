@@ -1,1 +1,132 @@
 /* pages/eqshow/eqshow.wxss */
+.title{
+  display: flex;
+}
+.title .page{
+  width: 0;
+  flex: 1;
+  justify-content: space-between;
+}
+/* 下拉框样式 */
+picker {
+  margin-bottom: -36px;
+}
+.weui-btn-area {
+  margin: 48px 36px 7px;
+}
+.weui-btn {
+  width: 190px;
+  margin-left: 0px;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-top: -48px;
+  color: #666;
+  background-color: #fff;
+  border: 1px solid #999;
+}
+
+/* 按钮样式 */
+.button-sp-area{
+  padding-top:10px;
+  text-align:center;
+  }
+  .weui-btn_mini{
+    /* margin-right:-122px; */
+    line-height: 1.4;
+    width: 70px;
+    /* margin-left: -144px; */
+  }
+
+/* 搜索框样式 */
+.searchbar-result {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+.searchbar-result .weui-cell__bd {
+  padding: 2px 0 2px 20px;
+  color: var(--weui-FG-1);
+}
+
+.searchbar-result:before {
+  display: none;
+}
+
+.weui-search-bar__label {
+  color: #666;
+  background: #fff;
+  border: 0px solid #999;
+}
+
+.weui-search-bar {
+  width: 210rpx;
+  font-weight: 700;
+  padding: 0px;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.weui-cell {
+  padding: 7px;
+}
+
+.weui-search-bar__box .weui-search-bar__input {
+  padding: 2px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.weui-search-bar__cancel-btn {
+  font-size: 12px;
+  line-height: 26px;
+  margin-right: 7px;
+}
+
+.weui-search-bar__label span {
+  font-size: 12px;
+}
+
+/* 表格样式 */
+
+.table {
+  border: 0px solid #666;
+  margin-top: 10px;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2.3rem;
+  align-items: center;
+  font-size: 12px;
+}
+
+.td {
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+}
+
+.bg-w {
+  background: rgb(247, 245, 245);
+}
+
+.bg-g {
+  background: rgb(228, 225, 225);
+}
+
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #becffe;
+  color: #666;
+  font-weight: 700;
+  display: flex;
+  height: 2.4rem;
+  align-items: center;
+  font-size: 12px;
+}

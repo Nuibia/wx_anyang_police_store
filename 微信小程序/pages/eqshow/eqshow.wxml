@@ -1,2 +1,91 @@
 <!--pages/eqshow/eqshow.wxml-->
-<text>这个是器材装备页面</text>
+
+<view class="title">
+  <!-- 下拉框 -->
+  <view class="page" data-weui-theme="{{theme}}">
+    <view class="page__bd">
+      <view class="weui-btn-area">
+        <picker value="{{index}}" range="{{kindData}}" range-key="{{'cName'}}" bindchange="bindPickerChange">
+          <a class="weui-btn weui-btn_default">
+            请选择器材装备种类：{{kindData[index].cName}}
+          </a>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <!-- 查看全部按钮 -->
+  <view class="page" data-weui-theme="{{theme}}">
+    <view class="page__bd">
+      <view class="button-sp-area" bindtap="lookAll">
+        <a class="weui-btn weui-btn_mini weui-btn_primary">查看全部</a>
+      </view>
+    </view>
+  </view>
+  <!-- 搜索框 -->
+  <view class="page" data-weui-theme="{{theme}}">
+    <view class="page__bd">
+      <view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+        <form class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+            <i class="weui-icon-search"></i>
+            <input type="text" class="weui-search-bar__input" placeholder="按照品名搜索" value="{{eName}}" focus="{{inputShowed}}" bindinput="handleInput" />
+            <span class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></span>
+          </view>
+          <label class="weui-search-bar__label" bindtap="showInput">
+            <i class="weui-icon-search"></i>
+            <span class="weui-search-bar__text">按照品名搜索</span>
+          </label>
+        </form>
+        <view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+      </view>
+      <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+        <view class="weui-cell weui-cell_active weui-cell_access">
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>实时搜索文本</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 表格 -->
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">序号</view>
+    <view class="th">品名</view>
+    <view class="th ">类别</view>
+    <view class="th ">货架号</view>
+    <view class="th ">库存数</view>
+    <view class="th ">目前借出</view>
+    <view class="th ">可用数量</view>
+    <view class="th ">新品</view>
+    <view class="th ">单位</view>
+    <view class="th ">备注</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="pageIndex">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{index+1}}</view>
+      <view class="td">{{item.eName}}</view>
+      <view class="td">{{item.cName}}</view>
+      <view class="td">{{item.sName}}</view>
+      <view class="td">{{item.sumNum}}</view>
+      <view class="td">{{item.lendNum}}</view>
+      <view class="td">{{item.canUNum}}</view>
+      <view class="td">{{item.newNum}}</view>
+      <view class="td">{{item.unit}}</view>
+      <view class="td">{{item.note}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{index+1}}</view>
+      <view class="td">{{item.eName}}</view>
+      <view class="td">{{item.cName}}</view>
+      <view class="td">{{item.sName}}</view>
+      <view class="td">{{item.sumNum}}</view>
+      <view class="td">{{item.lendNum}}</view>
+      <view class="td">{{item.canUNum}}</view>
+      <view class="td">{{item.newNum}}</view>
+      <view class="td">{{item.unit}}</view>
+      <view class="td">{{item.note}}</view>
+    </view>
+  </block>
+</view>

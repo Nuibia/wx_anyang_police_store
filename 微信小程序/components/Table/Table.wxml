@@ -1,0 +1,112 @@
+<!-- 这是表格组件
+author：jlf
+时间：2020/3/29
+ -->
+<!--components/Table/Table.wxml-->
+<wxs src="../../utils/formateDate.wxs" module="tutil" />
+<view class="table">
+    <view class="tr thead">
+        <!-- <view class="th">首页</view>
+        <view class="th">品名</view>
+        <view class="th">类名</view>
+        <view class="th">单位</view>
+        <view class="th">备注</view> -->
+        <block wx:for="{{thead}}" wx:key="id">
+            <view class="th {{item.isWidth}}">{{item.name}}</view>
+        </block>
+          
+    </view>
+    <!-- 归还渲染 -->
+    <block wx:for="{{tbody}}" wx:if="{{item.backTime}}" wx:key="id">
+        <view class="tr tbody">
+            <view class="td">{{index + 1}}</view> 
+            <view class="td">{{item.oddId}}</view> 
+            <view class="td">{{tutil.formatTime(item.backTime)}}</view> 
+            <view class="td">{{item.eName}}</view> 
+            <view class="td">{{item.cName}}</view> 
+            <view class="td">{{item.sName}}</view> 
+            <view class="td">{{item.totalNum}}</view> 
+            <view class="td">{{item.useName}}</view> 
+            <view class="td">{{item.uName}}</view> 
+            <view class="td">{{item.note}}</view>
+        </view>
+    </block>
+    <!-- 借出渲染 -->
+    <block wx:for="{{tbody}}" wx:if="{{item.lendTime}}" wx:key="id">
+        <view class="tr tbody">
+            <view class="td">{{index + 1}}</view> 
+            <view class="td">{{item.oddId}}</view> 
+            <view class="td">{{tutil.formatTime(item.lendTime)}}</view> 
+            <view class="td">{{item.eName}}</view> 
+            <view class="td">{{item.cName}}</view> 
+            <view class="td">{{item.sName}}</view> 
+            <view class="td">{{item.totalNum}}</view> 
+            <view class="td">{{item.useName}}</view> 
+            <view class="td">{{item.uName}}</view> 
+            <view class="td">{{item.note}}</view> 
+            <!-- <view class="td img">
+                <image src="https://www.barteam.cn:3587/img/15d7a097-4288-4f5d-aadd-6d723b65e5aa.jpg" style="width:80%;height:80%;"></image>
+            </view>  -->
+        </view>
+    </block>
+    <!-- 报废渲染 -->
+    <block wx:for="{{tbody}}" wx:if="{{item.sTime}}" wx:key="id">
+        <view class="tr tbody">
+            <view class="td">{{index + 1}}</view> 
+            <view class="td">{{item.oddId}}</view> 
+            <view class="td">{{tutil.formatTime(item.sTime)}}</view> 
+            <view class="td">{{item.eName}}</view> 
+            <view class="td">{{item.cName}}</view> 
+            <view class="td">{{item.sName}}</view> 
+            <view class="td">{{item.num}}</view> 
+            <view class="td">{{item.approver}}</view> 
+            <view class="td">{{item.uName}}</view> 
+            <view class="td">{{item.note}}</view> 
+            <view class="td img" bind:tap="handlePreviewImg" data-url="{{item.imgUrl}}">
+                <image src="{{item.imgUrl}}" style="width:80%;height:80%;"></image>
+            </view> 
+        </view>
+    </block>
+    <!-- 损耗渲染 -->
+    <block wx:for="{{tbody}}" wx:if="{{item.lTime}}" wx:key="id">
+        <view class="tr tbody">
+            <view class="td">{{index + 1}}</view>
+            <view class="td">{{tutil.formatTime(item.lTime)}}</view> 
+            <view class="td">{{item.eName}}</view> 
+            <view class="td">{{item.cName}}</view> 
+            <view class="td">{{item.sName}}</view> 
+            <view class="td">{{item.num}}</view>
+            <view class="td">{{item.uName}}</view> 
+            <view class="td">{{item.note}}</view> 
+        </view>
+    </block>
+    <!-- 购买渲染 -->
+    <block wx:for="{{tbody}}" wx:if="{{item.nTime}}" wx:key="id">
+        <view class="tr tbody">
+            <view class="td">{{index + 1}}</view>
+            <view class="td">{{tutil.formatTime(item.nTime)}}</view> 
+            <view class="td">{{item.eName}}</view> 
+            <view class="td">{{item.cName}}</view> 
+            <view class="td">{{item.sName}}</view> 
+            <view class="td">{{item.num}}</view>
+            <view class="td">{{item.uName}}</view> 
+            <view class="td">{{item.note}}</view> 
+        </view>
+    </block>
+    <!-- <view class="tr tbody">
+        <view class="td">1</view> 
+        <view class="td">2020032902</view> 
+        <view class="td">2020-03-29</view> 
+        <view class="td">枪</view> 
+        <view class="td">办公用品</view> 
+        <view class="td">1</view> 
+        <view class="td">1</view> 
+        <view class="td">jlf</view> 
+        <view class="td">jlf</view> 
+        <view class="td">这里是备注</view> 
+        <view class="td img">
+          <image src="https://www.barteam.cn:3587/img/15d7a097-4288-4f5d-aadd-6d723b65e5aa.jpg" style="width:80%;height:80%;"></image>
+        </view> 
+    </view> -->
+</view>
+  

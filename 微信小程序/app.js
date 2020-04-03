@@ -6,7 +6,8 @@ App({
     returnInfo:{}
   },
   onLaunch: function () {
-      this.baseUrl="https://www.barteam.cn:3587"
+      this.baseUrl="https://www.barteam.cn:3587";
+      // wx.clearStorage();
   },
 
   /**
