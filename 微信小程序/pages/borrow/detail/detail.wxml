@@ -15,7 +15,6 @@
       <view class="td">可用量</view>
       <view class="td">新品数</view>
       <view class="td">单位</view>
-      <view class="td">单号</view>
       <view class="td">管理员</view>
     </view>
     <view class="tr tTr" wx:for='{{ detailData }}' wx:key='index' >
@@ -27,7 +26,6 @@
       <view class="td">{{ item.canUNum }}</view>
       <view class="td">{{ item.newNum }}</view>
       <view class="td">{{ item.unit }}</view>
-      <view class="td">{{ dataInfo.oddId }}</view>
       <view class="td">{{ dataInfo.uName }}</view>
 
     </view>

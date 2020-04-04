@@ -2,6 +2,6 @@
   "usingComponents": {
     "Table":"../../components/Table/Table"
   },
-  "navigationBarTitleText": "器材使用记录",
+  "navigationBarTitleText": "使用记录",
   "pageOrientation": "landscape"
 }

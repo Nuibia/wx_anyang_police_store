@@ -2,6 +2,7 @@
   "usingComponents": {},
   "pageOrientation":"landscape",
     "enablePullDownRefresh": true,
-    "onReachBottomDistance": 2000
+    "onReachBottomDistance": 2000,
+    "navigationBarTitleText": "货架查看"
 
 }

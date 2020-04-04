@@ -7,14 +7,15 @@
 
 .form_item {
   display: flex;
-  margin-top: 20rpx;
+  margin: 20rpx;
   height: 80rpx;
-  border-top: 1rpx solid rgb(172, 169, 169);
-  border-bottom: 1rpx solid rgb(172, 169, 169);
+  border: 1rpx solid rgb(172, 169, 169);
+  border-radius: 10rpx;
   align-items: center;
 }
 
 .form_item image {
+  margin-left: 30rpx;
   width: 40rpx;
   height: 40rpx;
   margin-top: 4rpx;
@@ -28,7 +29,7 @@
   height: 80rpx;
   width: 75%;
   color: rgb(61, 59, 59);
-  font-size: 28rpx;
+  font-size: 12px;
 }
 
 picker {
@@ -37,16 +38,11 @@ picker {
 
 .picker {
   margin-left: 10rpx;
-  font-size: 32rpx;
+  font-size: 12px;
   display: inline-block;
   color: rgb(155, 151, 151);
   width: 400rpx;
 }
-
-.search_btn {
-  width: 100%;
-}
-
 button {
   margin: 0;
   padding: 0;
@@ -55,9 +51,8 @@ button {
   background-color: #337ab7;
   color: white;
   font-weight: 600;
-  /* font-size: 36rpx; */
+  font-size: 12px;
 }
-
 .borrow_table {
   display: flex;
   flex-direction: column;
@@ -69,7 +64,7 @@ button {
   height: 80rpx;
   background-color: #becffe;
   line-height: 80rpx;
-  font-size: 34rpx;
+  font-size: 12px;
 }
 
 .tTr {
@@ -95,7 +90,7 @@ button {
   background-color: #1aad19;
   color: white;
   font-weight: bold;
-  font-size: 32rpx;
+  font-size: 12px;
 
 }
 .td navigator {
@@ -112,13 +107,13 @@ button {
   background-color: #adb1ad;
   color: white;
   font-weight: bold;
-  font-size: 32rpx;
+  font-size: 12px;
 }
 
 .notFound {
   text-align: center;
   margin-top: 10rpx;
-  font-size: 34rpx;
+  font-size: 12px;
 }
 
 .page_turner {

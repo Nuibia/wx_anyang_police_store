@@ -31,3 +31,6 @@ page {
   border-radius: 10%;
   width: 9%;
 }
+.display{
+  font-size: 12px;
+}

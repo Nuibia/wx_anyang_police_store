@@ -3,6 +3,7 @@
   author: lts
   date: 2020/3/29
 -->
+<wxs module="dateFr" src="../../utils/formateDate.wxs"></wxs>
 <view class="borrowContainer">
   <view class="select">
     <view class="date, form_item">
@@ -38,7 +39,7 @@
       </view>
       <view wx:if='{{ isShow }}'>
         <view class="tr tTr" wx:for='{{ table }}' wx:key='index'>
-          <view class="td">{{ item.lendTime }}</view>
+          <view class="td">{{dateFr.formatTime(item.lendTime)}}</view>
           <view class="td">{{item.oddId}}</view>
           <view class="td">{{item.useName}}</view>
           <view class="td ">

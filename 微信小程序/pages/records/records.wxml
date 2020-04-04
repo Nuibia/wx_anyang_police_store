@@ -6,17 +6,17 @@ author：jlf
 <view class="top_row">
     <view class="picker">
         <picker bindchange="handlePickerChange" value="{{index}}" range="{{picker_array}}">
-            <input class="" value="{{picker_value}}" type="text" placeholder="器械归还记录" disabled="{{true}}"></input>
+            <input class="" value="{{picker_value}}" type="text" placeholder="器械归还记录" placeholder-style="font-size:12px" disabled="{{true}}"></input>
         </picker>
     </view>
     <view class="begintime">
         <picker mode="date" bindchange="handleBeginPickerChange" value="{{date}}">
-            <input class="" value="{{beginTime}}" type="text" placeholder="选择开始时间" disabled="{{true}}"></input>
+            <input class="" value="{{beginTime}}" type="text" placeholder="选择开始时间"  placeholder-style="font-size:12px"  disabled="{{true}}"></input>
         </picker>
     </view>
     <view class="overtime">
         <picker mode="date" bindchange="handleOverPickerChange" value="{{date}}">
-            <input class="" value="{{overTime}}" type="text" placeholder="选择结束时间" disabled="{{true}}"></input>
+            <input class=""  placeholder-style="font-size:12px"  value="{{overTime}}" type="text" placeholder="选择结束时间" disabled="{{true}}"></input>
         </picker>
     </view>
     <view class="search_btn" bind:tap="handleClickSearch">

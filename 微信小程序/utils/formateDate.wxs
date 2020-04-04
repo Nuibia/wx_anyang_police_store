@@ -1,3 +1,4 @@
+//格式化时间 ：微信没有自带过滤器
 var formatTime = function (date) {
     var date = getDate(date); //返回当前时间对象
     var year = date.getFullYear()

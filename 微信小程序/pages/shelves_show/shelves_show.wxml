@@ -7,7 +7,7 @@
   <view class="search">
     <view class="search-text">
       <text class="iconfont icon-sousuo"></text>
-      <input type="number" placeholder="按照货架号" bindinput="handleInput" value="{{sName}}" bindfocus="{{inputShowed}}" />
+      <input type="number" placeholder="按照货架号"   bindinput="handleInput" placeholder-style="font-size:12px" value="{{sName}}" bindfocus="{{inputShowed}}" />
     </view>
   </view>
   <!-- 内容区 -->
@@ -24,21 +24,21 @@
       <view class="th-2">备注</view>
     </view>
     <block wx:if="{{shelvesList.length > 0}}">
-       <view class='row1'  wx:for='{{shelvesList}}' wx:key='{{item.id}}'>
-      <view class="td">{{index+1}}</view>
-      <view class='td'>{{item.SName}}</view>
-      <view class='column2-wrapper'>
-        <view class='column2' wx:if='{{item.EqList.length > 0}}' wx:for='{{item.EqList}}' wx:for-item='item2' wx:key='{{item2.id}}'>
-          <view class='td'>{{item2.eName}}</view>
-          <view class='td'>{{item2.cName}}</view>
-          <view class='td'>{{item2.totalNum}}</view>
-          <view class='td'>{{item2.canUNum}}</view>
-          <view class='td'>{{item2.lendNum}}</view>
-          <view class='td'>{{item2.newNum}}</view>
-          <view class='td'>{{item2.note}}</view>
+      <view class='row1' wx:for='{{shelvesList}}' wx:key='{{item.id}}'>
+        <view class="td">{{index+1}}</view>
+        <view class='td'>{{item.SName}}</view>
+        <view class='column2-wrapper'>
+          <view class='column2' wx:if='{{item.EqList.length > 0}}' wx:for='{{item.EqList}}' wx:for-item='item2' wx:key='{{item2.id}}'>
+            <view class='td'>{{item2.eName}}</view>
+            <view class='td'>{{item2.cName}}</view>
+            <view class='td'>{{item2.totalNum}}</view>
+            <view class='td'>{{item2.canUNum}}</view>
+            <view class='td'>{{item2.lendNum}}</view>
+            <view class='td'>{{item2.newNum}}</view>
+            <view class='td'>{{item2.note}}</view>
+          </view>
         </view>
       </view>
-    </view>
     </block>
     <block wx:else>
       <text class="noData">暂无数据……</text>

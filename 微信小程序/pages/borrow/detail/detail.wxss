@@ -8,7 +8,7 @@
 .borrow_table {
   display: flex;
   flex-direction: column;
-  font-size: 20rpx;
+  font-size: 12px;
 }
 
 .tr {
@@ -20,7 +20,7 @@
   background-color: white;
 }
 .td {
-  width: 10%;
+  width: 12%;
   text-align: center;
   border: 1rpx solid rgb(224, 224, 224);
   overflow: hidden;

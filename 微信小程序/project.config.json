@@ -24,7 +24,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.4",
-	"appid": "wx3ba05dd7c58bfca3",
+	"appid": "wx6b1014678b2f4e65",
 	"projectname": "%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -60,6 +60,34 @@
 					"id": -1,
 					"name": "pages/eqshow/eqshow",
 					"pathName": "pages/eqshow/eqshow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/records/records",
+					"pathName": "pages/records/records",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/eqshow/eqshow",
+					"pathName": "pages/eqshow/eqshow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shelves_show/shelves_show",
+					"pathName": "pages/shelves_show/shelves_show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/borrow/borrow",
+					"pathName": "pages/borrow/borrow",
 					"query": "",
 					"scene": null
 				},

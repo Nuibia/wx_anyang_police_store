@@ -2,6 +2,7 @@
   "usingComponents": {},
   "pageOrientation": "landscape",
   "enablePullDownRefresh":true,
-  "onReachBottomDistance":50
+  "onReachBottomDistance":50,
+  "navigationBarTitleText": "器材装备"
 
 }
